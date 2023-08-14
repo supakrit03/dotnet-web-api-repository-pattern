@@ -41,7 +41,7 @@ namespace RepositoryPattern.Stock
                 .Set(f => f.Price, stockModel.Price)
                 .Set(f => f.Index, stockModel.Index);
 
-           await _stockCollection.UpdateOneAsync(stock => stock.Id == id, update);
+            await _stockCollection.UpdateOneAsync(stock => stock.Id == id, update);
         }
 
         public async Task DeleteStock(string id)

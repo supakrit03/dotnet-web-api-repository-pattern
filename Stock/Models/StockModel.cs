@@ -4,13 +4,13 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace RepositoryPattern.Stock.Models
 {
-	public class StockModel
-	{
-		[BsonId]
+    public class StockModel
+    {
+        [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 
-		[BsonElement("name")]
+        [BsonElement("name")]
         public string Name { get; set; }
 
         [BsonElement("price")]
